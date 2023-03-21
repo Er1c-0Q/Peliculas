@@ -7,7 +7,9 @@ namespace Pelicula
     public class Pelicula
     {
         //Campos
-        private string titulo, director, pais;
+        private string titulo;
+        private string director;
+        private string pais;
         private Int16 año;
 
         public Actor actores { get; set; }
@@ -33,9 +35,9 @@ namespace Pelicula
      
         public void Imprime()
         {
+          System.Console.WriteLine();  
           Console.WriteLine(titulo);
           Console.WriteLine(año);
-          System.Console.WriteLine();
           
         }
     }
@@ -48,19 +50,21 @@ namespace Pelicula
         private Int16 edad{ get; set; }
 
         //Constructores
-       public Actor(string n, Int16 a)
+        /*public Actor ()
+        {
+
+        }*/
+
+        public Actor(string n, Int16 a)
         {
             nombre = n;
             edad = a;
         }
-        public Actor ()
-        {
-
-        }
 
         //Métodos 
-        /*string GetNombre(){return nombre;}
-        Int16 GetEdad(){return edad;}*/
+        string GetNombre(){return nombre;}
+        Int16 GetEdad(){return edad;}
+
         public void Imprimeactores()
         {
             Console.WriteLine(nombre +" "+ edad+ " años");
@@ -75,20 +79,27 @@ namespace Pelicula
 
         static void Main(string[] args)
         {   
-            Actor actores = new Actor();
-            
             Pelicula p1 = new Pelicula ("La Forma del Agua",2017);
-            /*p1.actores = (new Actor("Sally Hawkins", 46));
-            p1.actores = (new Actor("Doug Jones", 62));*/
-            p1.Imprime();
+            Actor actor1 = new Actor("Sally Hawkins", 46);
+            Actor actor2 = new Actor("Doug Jones", 46);
+            p1.Imprime(); 
+            actor1.Imprimeactores();
+            actor2.Imprimeactores();
 
             
-            Actor actores2 = new Actor();
+           /* Actor actores2 = new Actor();*/
 
             Pelicula p2 = new Pelicula("Titanic", 1997);
+            Actor actor3 = new Actor("Leonardo DiCaprio", 48);
+            Actor actor4 = new Actor("Kate Winslet", 47);
+            p2.Imprime(); 
+            actor1.Imprimeactores();
+            actor2.Imprimeactores();
+            
+
+            
             /*p2.actores = (new Actor("Leonardo DiCaprio", 48));
             p2.actores = (new Actor("Kate Winslet", 47));*/
-            p2.Imprime();
 
             
            /* List<string> peliculas = new List<string>();
