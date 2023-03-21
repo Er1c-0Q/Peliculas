@@ -78,16 +78,16 @@ namespace Pelicula
             Actor actores = new Actor();
             
             Pelicula p1 = new Pelicula ("La Forma del Agua",2017);
-            p1.actores = (new Actor("Sally Hawkins", 46));
-            p1.actores = (new Actor("Doug Jones", 62));
+            /*p1.actores = (new Actor("Sally Hawkins", 46));
+            p1.actores = (new Actor("Doug Jones", 62));*/
             p1.Imprime();
 
             
             Actor actores2 = new Actor();
 
             Pelicula p2 = new Pelicula("Titanic", 1997);
-            p2.actores = (new Actor("Leonardo DiCaprio", 48));
-            p2.actores = (new Actor("Kate Winslet", 47));
+            /*p2.actores = (new Actor("Leonardo DiCaprio", 48));
+            p2.actores = (new Actor("Kate Winslet", 47));*/
             p2.Imprime();
 
             
