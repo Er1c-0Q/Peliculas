@@ -15,6 +15,8 @@ namespace Pelicula
         public Actor actores { get; set; }
 
 
+
+
         //Constructores
         public Pelicula()
         {
