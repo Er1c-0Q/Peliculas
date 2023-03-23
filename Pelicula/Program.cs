@@ -8,17 +8,17 @@ namespace Pelicula
     {
         //Campos
         private string titulo { get; set; }
-        private string director;
-        private string pais;
-        private Int16 año { get; set; }
+        private string director{ get; set; }
+        private string pais{ get; set; }
+        private short año { get; set; }
 
 
 
         //Constructores
-        public Pelicula(string newtit, Int16 newaño)
+        public Pelicula(string tit, short añ)
         {
-            titulo = newtit;
-            año = newaño;
+            titulo = tit;
+            año = añ;
         }
 
         //Métodos
@@ -34,13 +34,12 @@ namespace Pelicula
     public class Actor
     {
         //Propiedades
-        private Int16 edad { get; set; }
+        private short edad { get; set; }
         private string nombre { get; set; }
-        //public Actor actores { get; set; }
 
         //Constructores
 
-        public Actor(string n, Int16 e)
+        public Actor(string n, short e)
         {
             this.nombre = n;
             this.edad = e;
