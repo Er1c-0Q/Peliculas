@@ -13,18 +13,23 @@ namespace Pelicula
         private short año { get; set; }
 
         //Constructores
-        public Pelicula(string t, short ñ)
+        public Pelicula()
+        {
+        }
+        public Pelicula(string t, short ñ) : this() 
         {
             this.titulo = t;
             this.año = ñ;
         }
+
+        
 
         //Métodos
         public void SetTitulo(string titulo){this.titulo = titulo;}
         public void SetAño(short año){this.año = año;}
         public string GetTitulo(){return this.titulo;}
         public short GetAño(){return this.año;}
-        
+
         public void Imprime()
         {
           Console.WriteLine();  
