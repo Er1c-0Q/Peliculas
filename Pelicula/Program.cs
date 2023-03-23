@@ -7,6 +7,7 @@ namespace Pelicula
     public class Pelicula
     {
         //Campos
+        private List<Actor> actores = new List<Actor>();
         private string titulo { get; set; }
         private string director{ get; set; }
         private string pais{ get; set; }
@@ -22,6 +23,7 @@ namespace Pelicula
             this.año = ñ;
         }
 
+        public void AgregaActor(Actor a){actores.Add(a);}
         
 
         //Métodos
@@ -30,10 +32,16 @@ namespace Pelicula
         public string GetTitulo(){return this.titulo;}
         public short GetAño(){return this.año;}
 
+        public void ImprimeActores(){
+            foreach (var a in actores)
+            {
+                a.Imprimeactores();
+            }
+        }
         public void Imprime()
         {
           Console.WriteLine();  
-          Console.WriteLine(titulo+" "+año);
+          Console.WriteLine($"{titulo} ({año})");
           
           
         }
@@ -47,17 +55,17 @@ namespace Pelicula
 
         //Constructores
 
-        public Actor(string n, short e)
-        {
-            this.nombre = n;
-            this.edad = e;
-        }
+    public Actor(string n, short e)
+    {
+        this.nombre = n;
+        this.edad = e;
+    }
 
         //Métodos 
 
         public void Imprimeactores()
         {
-            Console.WriteLine(nombre +" "+ edad+ " años");
+            Console.WriteLine($"{nombre} ({edad})");
         }
     }
 
@@ -69,14 +77,14 @@ namespace Pelicula
 
         static void Main(string[] args)
         {   
-            List<Actor> actores = new List<Actor>();
+            List<Actor> AgregaActor = new List<Actor>();
             
             Pelicula p1 = new Pelicula ("La Forma del Agua",2017);
-            actores.Add(new Actor("Sally Hawkins", 46)); 
-            actores.Add(new Actor("Doug Jones", 46));
+            AgregaActor.Add(new Actor("Sally Hawkins", 46)); 
+            AgregaActor.Add(new Actor("Doug Jones", 46));
             p1.Imprime(); 
 
-            foreach(var m in actores)
+            foreach(var m in AgregaActor)
             m.Imprimeactores();
 
             List<Actor> actor = new List<Actor>();
