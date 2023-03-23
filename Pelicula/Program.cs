@@ -12,19 +12,22 @@ namespace Pelicula
         private string pais{ get; set; }
         private short año { get; set; }
 
-
-
         //Constructores
-        public Pelicula(string tit, short añ)
+        public Pelicula(string t, short ñ)
         {
-            titulo = tit;
-            año = añ;
+            this.titulo = t;
+            this.año = ñ;
         }
 
         //Métodos
+        public void SetTitulo(string titulo){this.titulo = titulo;}
+        public void SetAño(short año){this.año = año;}
+        public string GetTitulo(){return this.titulo;}
+        public short GetAño(){return this.año;}
+        
         public void Imprime()
         {
-          System.Console.WriteLine();  
+          Console.WriteLine();  
           Console.WriteLine(titulo+" "+año);
           
           
